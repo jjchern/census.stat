@@ -7,7 +7,7 @@
 \alias{county_race_gender}
 \alias{county_educ}
 \title{County-level statistics, 1999-2015}
-\format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 54791 rows and 16 columns.}
+\format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 58014 rows and 16 columns.}
 \usage{
 county_stat
 

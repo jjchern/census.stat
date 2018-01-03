@@ -10,7 +10,7 @@ Installation
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("jjchern/census.stat@v0.0.1")
+devtools::install_github("jjchern/census.stat@v0.0.2")
 
 # To uninstall the package, use:
 # remove.packages("census.stat")

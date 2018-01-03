@@ -35,7 +35,7 @@ median_age_2000 %>%
   gather(year, median_age, -county_code) %>%
   arrange(county_code, year) %>%
   mutate(year = parse_number(year)) %>%
-  {right_join(., expand(., county_code, year = 1999:2015))} %>%
+  {right_join(., expand(., county_code, year = 1999:2016))} %>%
   group_by(county_code) %>%
   arrange(county_code, year) %>%
   filter(sum(!is.na(median_age)) >= 2) %>%
@@ -43,4 +43,4 @@ median_age_2000 %>%
   ungroup() %>%
   print(n = 20) -> county_median_age
 
-devtools::use_data(county_median_age)
+devtools::use_data(county_median_age, overwrite = TRUE)

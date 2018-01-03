@@ -1,6 +1,6 @@
 Package: census.stat
 Title: Statistics from US Census
-Version: 0.0.1
+Version: 0.0.2
 Authors@R: person("JJ", "Chen", , "jiajia.chern@gmail.com", c("aut", "cre"))
 Description: Running `tidycensus::get_decennial()` or `tidycensus::get_acs()` is expansive. 
   It's better to put the resulted variables in one package.

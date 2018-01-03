@@ -105,7 +105,7 @@ educ_2000 %>%
   print(n = 35) %>%
   mutate(pct_ba_degree = round(pct_ba_degree, 1),
          pct_hs_or_less = round(pct_hs_or_less, 1)) %>%
-         {right_join(., expand(., county_code, year = 1999:2015))} %>%
+         {right_join(., expand(., county_code, year = 1999:2016))} %>%
   print(n = 35) %>%
   group_by(county_code) %>%
   arrange(county_code, year) %>%
@@ -119,4 +119,4 @@ educ_2000 %>%
          pct_hs_or_less, pct_hs_or_less_appx) %>%
   print(n = 20) -> county_educ
 
-devtools::use_data(county_educ)
+devtools::use_data(county_educ, overwrite = TRUE)

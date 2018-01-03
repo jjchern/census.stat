@@ -121,7 +121,7 @@ race_gender_2000 %>%
   arrange(county_code, year) %>%
   mutate(rate = round(rate, 1)) %>%
   spread(name, rate) %>%
-  {right_join(., expand(., county_code, year = 1999:2015))} %>%
+  {right_join(., expand(., county_code, year = 1999:2016))} %>%
   group_by(county_code) %>%
   arrange(county_code, year) %>%
   filter(sum(!is.na(pct_black)) >= 2) %>%
@@ -140,5 +140,5 @@ race_gender_2000 %>%
          pct_male,    pct_male_appx) %>%
   print(n = 20) -> county_race_gender
 
-devtools::use_data(county_race_gender)
+devtools::use_data(county_race_gender, overwrite = TRUE)
 
